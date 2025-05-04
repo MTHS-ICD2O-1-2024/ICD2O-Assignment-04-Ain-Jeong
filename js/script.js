@@ -10,23 +10,28 @@
 // eslint-disable-next-line no-unused-vars
 function checkPrice () {
   // input
-  const coffeeSize = document.getElementById('coffee-size').value
-  const addOns = document.getElementById('add-ons').value
+  let totalPrice = 0
+  const regularCone = document.getElementById('regular-cone').checked
+  const numberOfScoops = document.getElementById('number-of-scoops').value
 
-  // process
-  if (
-    (userAge <= 21 && userAge >= 12) ||
-    day === 'tuesday' ||
-    day === 'thursday'
-  ) {
-    // output
-    document.getElementById('answer').innerHTML =
-      'You are eligible for the student pricing!'
+  // process (size of cone)
+  if (regularCone === true) {
+    totalPrice = totalPrice + 3
   } else {
-    // output
-    document.getElementById('answer').innerHTML = 'You must pay regular price.'
+    totalPrice = totalPrice + 5
   }
+  // process (number of scoops)
+  if (numberOfScoops === 'one-scoop') {
+    totalPrice = totalPrice + 2
+  } else if (numberOfScoops === 'two-scoop') {
+    totalPrice = totalPrice + 3.5
+  } else {
+    totalPrice = totalPrice + 5
+  }
+  // tax calculation
+  totalPrice = totalPrice * (1 + 0.13)
+
+  // output
+  document.getElementById('answer').innerHTML =
+    'Total price of your ice cream order is $' + totalPrice.toFixed(2)
 }
-
-
-  const taxes = hoursWorked * hourlyWage * 0.18
