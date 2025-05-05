@@ -4,34 +4,41 @@
 // Created on: Apr 2025
 // This file contains the JS functions for index.html
 
+"use-strict"
+
 /**
  * This function check user's age and the type of movie they can watch
  */
 // eslint-disable-next-line no-unused-vars
 function checkPrice () {
-  // input
-  let totalPrice = 0
-  const regularCone = document.getElementById('regular-cone').checked
-  const numberOfScoops = document.getElementById('number-of-scoops').value
+  const TAX = 0.13
+  let subTotal = 0
 
-  // process (size of cone)
-  if (regularCone === true) {
-    totalPrice = totalPrice + 3
+  // input
+  const coffeeSize = document.getElementById('size-grande').checked
+  const addOns = document.getElementById('add-ons').value
+
+  // process (size of coffee)
+  if (coffeeSize === true) {
+    subTotal = subTotal + 2.5
   } else {
-    totalPrice = totalPrice + 5
+    subTotal = subTotal + 3.5
   }
-  // process (number of scoops)
-  if (numberOfScoops === 'one-scoop') {
-    totalPrice = totalPrice + 2
-  } else if (numberOfScoops === 'two-scoop') {
-    totalPrice = totalPrice + 3.5
+
+  // process (add-on options)
+  if (addOns === 'add-shots') {
+    subTotal = subTotal + 1
+  } else if (addOns === 'add-syrups') {
+    subTotal = subTotal + 0.8
   } else {
-    totalPrice = totalPrice + 5
+    subTotal = subTotal + 0.5
   }
+
   // tax calculation
-  totalPrice = totalPrice * (1 + 0.13)
+  totalPrice = subTotal * (1 + TAX)
 
   // output
   document.getElementById('answer').innerHTML =
-    'Total price of your ice cream order is $' + totalPrice.toFixed(2)
+    'Sub Total: $' + subTotal.toFixed(2) + 'Tax Rate: 13%' + 'Total Price: $' + totalPrice.toFixed(2)
+
 }

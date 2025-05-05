@@ -18,21 +18,21 @@
 }
 
 .page-content-heading {
-  color: rgb(53 155 164);
+  color: rgb(28 16 6);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   padding-bottom: 15pt;
 }
 
 .page-content-guide {
-  color: rgb(53 155 164);
+  color: rgb(28 16 6);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
 }
 
 .page-content {
-  color: rgb(53 155 164);
+  color: rgb(28 16 6);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.7rem;
   padding-top: 5pt;
@@ -40,7 +40,7 @@
 }
 
 .page-content-answer {
-  color: rgb(53 155 164);
+  color: rgb(28 16 6);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.7rem;
   padding-top: 20pt;
@@ -53,5 +53,5 @@ img {
 }
 
 body {
-  background-color: rgb(255 224 229);
+  background-color: rgb(252 243 231);
 }

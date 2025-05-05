@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Ice Cream Order, with JS" />
+    <meta name="description" content="Coffee Order, with JS" />
     <meta name="keywords" content="mths, icd2o" />
     <meta name="author" content="Ain Jeong" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.cyan-pink.min.css"
+      href="https://code.getmdl.io/1.3.0/material.brown-orange.min.css"
     />
     <link
       rel="apple-touch-icon"
@@ -33,7 +33,7 @@
       href="./favicon-16x16.png"
     />
     <link rel="manifest" href="site.webmanifest" />
-    <title>Ice Cream Order, with JS</title>
+    <title>Coffee Order, with JS</title>
   </head>
 
   <body>
@@ -42,53 +42,53 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Ice Cream Order, with JS</span>
+          <span class="mdl-layout-title">Coffee Order, with JS</span>
         </div>
       </header>
       <main class="mdl-layout__content">
         <div class="right-image">
-          <img src="./images/strawberry-ice-cream.png" alt="Ice Cream image" />
+          <img src="./images/coffee.png" alt="Coffee image" />
         </div>
         <br />
         <form>
-          <div class="page-content-guide">Cone Size</div>
+          <div class="page-content-guide">Coffee Size</div>
           <div class="page-content">
             <label
               class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-              for="regular-cone"
+              for="size-grande"
             >
               <input
                 type="radio"
-                id="regular-cone"
+                id="size-grande"
                 class="mdl-radio__button"
-                name="cone-size"
+                name="coffee-size"
                 value="1"
                 checked
               />
-              <span class="mdl-radio__label">Regular Cone ($3.00)</span>
+              <span class="mdl-radio__label">Grande ($2.50)</span>
             </label>
             <label
               class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-              for="waffle-cone"
+              for="size-venti"
             >
               <input
                 type="radio"
-                id="waffle-cone"
+                id="size-venti"
                 class="mdl-radio__button"
-                name="cone-size"
+                name="coffee-size"
                 value="2"
               />
-              <span class="mdl-radio__label">Waffle Cone ($5.00)</span>
+              <span class="mdl-radio__label">Venti ($3.50)</span>
             </label>
           </div>
           <br />
-          <div class="page-content-guide">Scoops of Ice Cream</div>
+          <div class="page-content-guide">Add-Ons</div>
           <div class="page-content">
             <div class="mdl-textfield mdl-js-textfield">
-              <select class="mdl-textfield__input" id="number-of-scoops">
-                <option value="one-scoop">1 scoop ($2.00)</option>
-                <option value="two-scoop">2 scoops ($3.50)</option>
-                <option value="three-scoop">3 scoops ($5.00)</option>
+              <select class="mdl-textfield__input" id="add-ons">
+                <option value="add-shots">Extra Espresso Shot ($1.00)</option>
+                <option value="add-syrups">Syrups ($0.80)</option>
+                <option value="add-cream">Whipped Cream ($0.50)</option>
               </select>
             </div>
           </div>
@@ -98,7 +98,7 @@
             onclick="checkPrice ()"
             type="button"
           >
-            Check the Total Price
+            Check The Price
           </button>
         </form>
         <br />
