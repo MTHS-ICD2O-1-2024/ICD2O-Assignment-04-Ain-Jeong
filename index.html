@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Coffee Order, with JS" />
+    <meta name="description" content="Dinosaur Museum, with JS" />
     <meta name="keywords" content="mths, icd2o" />
     <meta name="author" content="Ain Jeong" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.brown-orange.min.css"
+      href="https://code.getmdl.io/1.3.0/material.teal-light_green.min.css"
     />
     <link
       rel="apple-touch-icon"
@@ -33,7 +33,7 @@
       href="./favicon-16x16.png"
     />
     <link rel="manifest" href="site.webmanifest" />
-    <title>Coffee Order, with JS</title>
+    <title>Dinosaur Museum, with JS</title>
   </head>
 
   <body>
@@ -42,53 +42,30 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Coffee Order, with JS</span>
+          <span class="mdl-layout-title">Dinosaur Museum, with JS</span>
         </div>
       </header>
       <main class="mdl-layout__content">
         <div class="right-image">
-          <img src="./images/coffee.png" alt="Coffee image" />
+          <img src="./images/dinosaurs.png" alt="Dinosaurs image" />
         </div>
         <br />
         <form>
-          <div class="page-content-guide">Coffee Size</div>
-          <div class="page-content">
-            <label
-              class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-              for="size-grande"
-            >
-              <input
-                type="radio"
-                id="size-grande"
-                class="mdl-radio__button"
-                name="coffee-size"
-                value="1"
-                checked
-              />
-              <span class="mdl-radio__label">Grande ($2.50)</span>
-            </label>
-            <label
-              class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-              for="size-venti"
-            >
-              <input
-                type="radio"
-                id="size-venti"
-                class="mdl-radio__button"
-                name="coffee-size"
-                value="2"
-              />
-              <span class="mdl-radio__label">Venti ($3.50)</span>
-            </label>
+          <div class="page-content-guide">Enter in your age:</div>
+          <form>
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="customer-age" />
+              <label class="mdl-textfield__label" for="customer-age">Your age here...</label>
+              <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
           <br />
-          <div class="page-content-guide">Add-Ons</div>
+          <div class="page-content-guide">Tour Options</div>
           <div class="page-content">
             <div class="mdl-textfield mdl-js-textfield">
-              <select class="mdl-textfield__input" id="add-ons">
-                <option value="add-shots">Extra Espresso Shot ($1.00)</option>
-                <option value="add-syrups">Syrups ($0.80)</option>
-                <option value="add-cream">Whipped Cream ($0.50)</option>
+              <select class="mdl-textfield__input" id="tour-option">
+                <option value="self-tour">Self-Guided Audio Tour</option>
+                <option value="private-tour">Private Guided Tour (less than 5)</option>
+                <option value="group-tour">Large Group Guided Tour (more than 6)</option>
               </select>
             </div>
           </div>

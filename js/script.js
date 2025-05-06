@@ -7,7 +7,7 @@
 "use-strict"
 
 /**
- * This function check user's age and the type of movie they can watch
+ * This function check the price of Dinosaur Museum's entry fee
  */
 // eslint-disable-next-line no-unused-vars
 function checkPrice () {
@@ -15,30 +15,34 @@ function checkPrice () {
   let subTotal = 0
 
   // input
-  const coffeeSize = document.getElementById('size-grande').checked
-  const addOns = document.getElementById('add-ons').value
+  const customerAge = parseFloat(document.getElementById("customer-age").value)
+  const tourOption = document.getElementById("tour-option").value
 
-  // process (size of coffee)
-  if (coffeeSize === true) {
-    subTotal = subTotal + 2.5
+  // process (cutomerAge)
+  if (customerAge <= 3 || customerAge >= 65) {
+    subTotal = subTotal + 15
   } else {
-    subTotal = subTotal + 3.5
+    subTotal = subTotal + 20
   }
 
-  // process (add-on options)
-  if (addOns === 'add-shots') {
-    subTotal = subTotal + 1
-  } else if (addOns === 'add-syrups') {
-    subTotal = subTotal + 0.8
+  // process (tourOption)
+  if (tourOption === "self-tour") {
+    subTotal = subTotal + 5
+  } else if (tourOption === "private-tour") {
+    subTotal = subTotal + 45
   } else {
-    subTotal = subTotal + 0.5
+    subTotal = subTotal + 12
   }
 
   // tax calculation
-  totalPrice = subTotal * (1 + TAX)
+  let totalPrice = subTotal * (1 + TAX)
 
   // output
-  document.getElementById('answer').innerHTML =
-    'Sub Total: $' + subTotal.toFixed(2) + 'Tax Rate: 13%' + 'Total Price: $' + totalPrice.toFixed(2)
-
+  document.getElementById("answer").innerHTML =
+    "Sub Total: $" +
+    subTotal.toFixed(2) +
+    "<br>" +
+    "Tax Rate: 13%<br>" +
+    "Total Price: $" +
+    totalPrice.toFixed(2)
 }
