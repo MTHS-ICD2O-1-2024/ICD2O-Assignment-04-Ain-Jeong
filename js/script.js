@@ -4,7 +4,7 @@
 // Created on: Apr 2025
 // This file contains the JS functions for index.html
 
-"use-strict"
+'use-strict'
 
 /**
  * This function check the price of Dinosaur Museum's entry fee
@@ -15,8 +15,8 @@ function checkPrice () {
   let subTotal = 0
 
   // input
-  const customerAge = parseFloat(document.getElementById("customer-age").value)
-  const tourOption = document.getElementById("tour-option").value
+  const customerAge = parseFloat(document.getElementById('customer-age').value)
+  const tourOption = document.getElementById('tour-option').value
 
   // process (cutomerAge)
   if (customerAge <= 3 || customerAge >= 65) {
@@ -26,23 +26,23 @@ function checkPrice () {
   }
 
   // process (tourOption)
-  if (tourOption === "self-tour") {
+  if (tourOption === 'self-tour') {
     subTotal = subTotal + 5
-  } else if (tourOption === "private-tour") {
+  } else if (tourOption === 'private-tour') {
     subTotal = subTotal + 45
   } else {
     subTotal = subTotal + 12
   }
 
   // tax calculation
-  let totalPrice = subTotal * (1 + TAX)
+  const totalPrice = subTotal * (1 + TAX)
 
   // output
-  document.getElementById("answer").innerHTML =
-    "Sub Total: $" +
+  document.getElementById('answer').innerHTML =
+    'Sub Total: $' +
     subTotal.toFixed(2) +
-    "<br>" +
-    "Tax Rate: 13%<br>" +
-    "Total Price: $" +
+    '<br>' +
+    'Tax Rate: 13%<br>' +
+    'Total Price: $' +
     totalPrice.toFixed(2)
 }
