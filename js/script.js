@@ -11,7 +11,7 @@
  */
 // eslint-disable-next-line no-unused-vars
 function checkPrice () {
-  const TAX = 0.13
+  const TAX_RATE = 0.13
   let subTotal = 0
 
   // input
@@ -35,14 +35,17 @@ function checkPrice () {
   }
 
   // tax calculation
-  const totalPrice = subTotal * (1 + TAX)
+  const tax = subTotal * TAX_RATE
+  const totalPrice = subTotal + tax
 
   // output
   document.getElementById('answer').innerHTML =
     'Sub Total: $' +
     subTotal.toFixed(2) +
     '<br>' +
-    'Tax Rate: 13%<br>' +
+    'Tax: $' +
+    tax.toFixed(2) +
+    '<br>' +
     'Total Price: $' +
     totalPrice.toFixed(2)
 }
